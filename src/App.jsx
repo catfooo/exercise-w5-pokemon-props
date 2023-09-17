@@ -13,11 +13,15 @@ or why not include some more data from the array? */
 
 import React from "react";
 import data from "./data.json";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export const App = () => {
   return (
     <div className="App">
+      <Header /> 
       <PokemonList data={data.pokemons} />
+      <Footer />
     </div>
   );
 };
