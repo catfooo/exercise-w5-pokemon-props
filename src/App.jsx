@@ -32,7 +32,15 @@ const PokemonList = ({ data }) => {
       <h1>Pokemon List</h1>
       <ul>
         {data.map((pokemon) => (
-          <li key={pokemon.id}>{pokemon.name}</li>
+          <li key={pokemon.id}>
+            <strong>{pokemon.name}</strong> (ID: {pokemon.id})
+            <br />
+            Type: {pokemon.types.join(", ")}
+            <br />
+            Height: {pokemon.height} m
+            <br />
+            Weight: {pokemon.weight} kg
+          </li>
         ))}
       </ul>
     </div>
